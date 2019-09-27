@@ -1,2 +1,6 @@
 # ProjectTwo
-Initiative Tracker for D&amp;D and other tabletop games.
+
+Initiative Tracker for D&D and other tabletop games.
+
+Ed Ritter
+Steven Terwilliger
