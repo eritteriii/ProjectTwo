@@ -1,0 +1,29 @@
+<div class="container-fluid text-center" id="game-lobby">
+	<h1 id="room-name" draggable="false"></h1>
+	<h2 id="campaign-description" draggable="false"></h2>
+	<h3  id="dm-name"draggable="false"></h3>
+	<div class="col-12" id="player-list"></div>
+	<div id="waiting-for-players" class="col-4">
+		<strong><i>Waiting for players to join...</i></strong>
+	</div>
+	<div id="dm-tools">
+		<div class="input-group">
+			<select class="custom-select" id="monster-select">
+				<option selected>Select a Moster</option>
+			</select>
+			<div class="input-group-append">
+				<button id="add-button" class="btn btn-outline-secondary" type="button">Add!</button>
+			</div>
+		</div>
+		<div class="input-group">
+			<label for="initiative-number">Create A Monster!</label>
+			<input class="form-control" id="monster-type" placeholder="Name Your Monster!"></input>
+			<div class="input-group-append">
+				<button id="create-button" class="btn btn-outline-secondary" type="button">Create!</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script src="https://kit.fontawesome.com/f522737c67.js" crossorigin="anonymous"></script>
+<script src="/js/gameLobby.js"></script>

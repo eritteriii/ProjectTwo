@@ -1,3 +1,43 @@
-.list-group-item {
-  line-height: 2.5;
+/*#initOrder{*/
+/*  font-family: mrs-eaves-roman-small-caps, sans-serif;*/
+/*  padding: 15px;*/
+/*  font-weight: 400;*/
+/*  font-style: normal;*/
+/*}*/
+/*.btn-dark{*/
+/*  width: 50%;*/
+/*  height: 100px;*/
+/*  border: none;*/
+/*  font-size: 50px;*/
+/*}*/
+/*.btn-circle{*/
+/*  width: 100px;*/
+/*  height: 100px;*/
+/*  border-radius: 50px;*/
+/*  background-color: black;*/
+/*  font-size: 50px;*/
+/*}*/
+/*.list-group-item{*/
+/*  line-height: 2.5;*/
+/*  display: inline-flex;*/
+/*  width: 100%;*/
+/*  border: none;*/
+/*}*/
+.namePlate{
+  width: 100%;
+}
+/* #game-lobby {
+  height: 98vh;
+  background-color: darkgray;
+} */
+.m-s-auto {
+  margin: 0 auto;
+}
+/* #server-time {
+background-color: darkgray;
+} */
+body {
+  text-align: center;
+  color: white;
+  background-image: url("https://i.pinimg.com/originals/34/2b/ed/342beddb14207e3289ab91bba8c0e1ae.jpg");
 }
