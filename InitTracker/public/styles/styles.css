@@ -38,6 +38,49 @@ background-color: darkgray;
 } */
 body {
   text-align: center;
-  color: white;
-  background-image: url("https://i.pinimg.com/originals/34/2b/ed/342beddb14207e3289ab91bba8c0e1ae.jpg");
+  background-image: url("assets/paper-bg.jpg");
+  width: 100vw;
+  font-family: ff-scala-sans-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.banner {
+  font-family: mrs-eaves-roman-small-caps, sans-serif;
+  padding: 15px;
+  font-weight: 600;
+  font-style: normal;
+  color: #822000;
+  
+  
+}
+
+.fa-dice-d20{
+}
+
+.gold-border{
+  border: 10px solid;
+  border-image-source: linear-gradient(135deg, #ffbf00, #b29700);
+  border-image-slice: 1;
+
+}
+
+h2{
+  color: black;
+  padding-bottom: 3vh;
+  font-style: italic;
+
+
+}
+
+#server-time{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  color: black;
+  
+}
+
+.btn-subText{
+  font-style: italic;
+  font-size: 75%;
 }
