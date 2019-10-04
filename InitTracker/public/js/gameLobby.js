@@ -83,28 +83,24 @@ function RefreshPlayerList() {
                 '<div id="player-' +
                 room.characters[i].index +
                 '">' +
-                '<button type="button" class="btn btn-dark namePlate" draggable="false">' +
+                '<button type="button" class="btn btn-dark namePlate" id="initPlate" draggable="false">' +
                 room.characters[i].name +
                 ", Initiative:" +
                 room.characters[i].initiative +
                 "</button>" +
                 "</div>" +
-                '<div class="skullbtn">' +
-                '<button type="button" class="btn btn-dark btn-circle">' +
-                '<i class="fas fa-skull"></i>' +
-                "</button>" +
-                "</div>" +
+                
                 '<div class="skullbtn">' +
                 "<button data-id='" +
                 i +
-                '\' type="button" class="btn btn-dark btn-circle end-turn">' +
+                '\' type="button" class="btn btn-success btn-circle end-turn">' +
                 '<i class="fas fa-angle-double-right"></i>' +
                 "</button>" +
                 "</div>" +
                 '<div class="skullbtn">' +
                 "<button data-id='" +
                 i +
-                '\' type="button" class="btn btn-dark btn-circle delete">' +
+                '\' type="button" class="btn btn-danger btn-circle delete">' +
                 "<i class='fas fa-trash-alt'></i>" +
                 "</button>" +
                 "</div>" +
@@ -120,21 +116,21 @@ function RefreshPlayerList() {
                 '<div id="player-' +
                 room.characters[i].index +
                 '">' +
-                '<button type="button" class="btn btn-dark namePlate" draggable="false">' +
+                '<button type="button" class="btn btn-dark namePlate" id="initPlate" draggable="false">' +
                 room.characters[i].name +
                 ", Initiative: " +
                 room.characters[i].initiative +
                 "</button>" +
                 "</div>" +
                 '<div class="skullbtn">' +
-                '<button type="button" class="btn btn-dark btn-circle">' +
+                '<button type="button" class="btn btn-dark btn-circle skull">' +
                 '<i class="fas fa-skull"></i>' +
                 "</button>" +
                 "</div>" +
                 '<div class="skullbtn">' +
                 "<button data-id='" +
                 i +
-                '\' type="button" class="btn btn-dark btn-circle delete">' +
+                '\' type="button" class="btn btn-danger btn-circle delete">' +
                 "<i class='fas fa-trash-alt'></i>" +
                 "</button>" +
                 "</div>" +
