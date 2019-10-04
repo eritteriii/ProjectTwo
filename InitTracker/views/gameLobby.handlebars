@@ -1,7 +1,8 @@
 <div class="container-fluid text-center" id="game-lobby">
+	<h1 class="banner">Init<i class="fas fa-dice-d20"></i>Tracker</h1>
 	<h1 id="room-name" draggable="false"></h1>
 	<h2 id="campaign-description" draggable="false"></h2>
-	<h3  id="dm-name"draggable="false"></h3>
+	<h3 id="dm-name" draggable="false"></h3>
 	<div class="col-12" id="player-list"></div>
 	<div id="waiting-for-players" class="col-4">
 		<strong><i>Waiting for players to join...</i></strong>
@@ -9,17 +10,17 @@
 	<div id="dm-tools">
 		<div class="input-group">
 			<select class="custom-select" id="monster-select">
-				<option selected>Select a Moster</option>
+				<option selected>Monster Menu</option>
 			</select>
 			<div class="input-group-append">
-				<button id="add-button" class="btn btn-outline-secondary" type="button">Add!</button>
+				<button id="add-button" class="btn btn-outline-secondary" type="button">Add To Initiative</button>
 			</div>
 		</div>
 		<div class="input-group">
-			<label for="initiative-number">Create A Monster!</label>
-			<input class="form-control" id="monster-type" placeholder="Name Your Monster!"></input>
+			<label for="initiative-number"></label>
+			<input class="form-control" id="monster-type" placeholder='"Steve" would make a good monster name.'></input>
 			<div class="input-group-append">
-				<button id="create-button" class="btn btn-outline-secondary" type="button">Create!</button>
+				<button id="create-button" class="btn btn-outline-secondary" type="button">Create New Monster</button>
 			</div>
 		</div>
 	</div>

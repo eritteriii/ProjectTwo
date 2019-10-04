@@ -23,7 +23,7 @@
 /*  width: 100%;*/
 /*  border: none;*/
 /*}*/
-.namePlate{
+.namePlate {
   width: 100%;
 }
 /* #game-lobby {
@@ -50,37 +50,71 @@ body {
   font-weight: 600;
   font-style: normal;
   color: #822000;
-  
-  
 }
 
-.fa-dice-d20{
+.fa-dice-d20 {
 }
 
-.gold-border{
+.gold-border {
   border: 10px solid;
   border-image-source: linear-gradient(135deg, #ffbf00, #b29700);
   border-image-slice: 1;
-
 }
 
-h2{
+h2 {
   color: black;
   padding-bottom: 3vh;
   font-style: italic;
-
-
 }
 
-#server-time{
+#server-time {
   position: fixed;
   bottom: 0;
   right: 0;
   color: black;
-  
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: -99;
 }
 
-.btn-subText{
+/* BUTTONS */
+
+.namePlate {
+  width: 50vw;
+  margin-bottom: 10px;
+  font-family: mrs-eaves-roman-small-caps, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+#play-btn {
+  background-color: #822000;
+}
+
+#dm-btn {
+  background-color: #822000;
+}
+
+.btn-lg {
+  width: 40vw;
+}
+
+#create-button {
+  width: 30vw;
+}
+
+#add-button {
+  width: 30vw;
+}
+.skullbtn {
+  background-color: white;
+}
+.btn-subText {
   font-style: italic;
   font-size: 75%;
+}
+
+/* FORMS */
+
+.input-group {
+  margin-bottom: 10px;
 }
