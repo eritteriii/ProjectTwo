@@ -75,70 +75,60 @@ function RefreshPlayerList() {
       console.log("Refreshing player list", room.characters);
       $waitingForPlayers.hide();
       for (var i = 0; i < room.characters.length; i++) {
+        var status = "charIsAlive"
+        if (room.characters[i].isDead){
+          status = "charIsDead"
+        }
         if (i == 0 && room.characters.length > 1) {
           $playerList.append(
-            $(
-              "<div class='row'>" +
-                '<div class="btn-group m-s-auto">' +
-                '<div id="player-' +
-                room.characters[i].index +
-                '">' +
-                '<button type="button" class="btn btn-dark namePlate" id="initPlate" draggable="false">' +
-                room.characters[i].name +
-                ", Initiative:" +
-                room.characters[i].initiative +
-                "</button>" +
-                "</div>" +
-                
-                '<div class="skullbtn">' +
-                "<button data-id='" +
-                i +
-                '\' type="button" class="btn btn-success btn-circle end-turn">' +
-                '<i class="fas fa-angle-double-right"></i>' +
-                "</button>" +
-                "</div>" +
-                '<div class="skullbtn">' +
-                "<button data-id='" +
-                i +
-                '\' type="button" class="btn btn-danger btn-circle delete">' +
-                "<i class='fas fa-trash-alt'></i>" +
-                "</button>" +
-                "</div>" +
-                "</div>" +
-                "</div>"
-            )
+              $(
+                  '<div class="row">' +
+                      '<div class="btn-group m-s-auto">' +
+                          '<div id="player-' + room.characters[i].index +'">' +
+                              '<button data-id="' + i + '" type="button" class="btn btn-dark namePlate1 ' + status + '" draggable="false">' + room.characters[i].name + ", Initiative:" + room.characters[i].initiative + '</button>' +
+                          '</div>' +
+                          '<div class="skullbtn">' +
+                              '<button data-id="' + i + '" type="button" class="btn btn-success btn-circle end-turn">' +
+                                  '<i class="fas fa-angle-double-right"></i>' +
+                              '</button>' +
+                          '</div>' +
+                          '<div class="skullbtn">' +
+                          '<button data-id="' + i +'" type="button" class="btn btn-dark btn-circle skull">' +
+                              '<i class="fas fa-skull"></i>' +
+                          '</button>' +
+                      '</div>' +
+                          '<div class="skullbtn">' +
+                              '<button data-id="' + i + '" type="button" class="btn btn-danger btn-circle delete">' +
+                                  '<i class="fas fa-trash-alt"></i>' +
+                              '</button>' +
+                          '</div>' +
+                      '</div>' +
+                  '</div>'
+              )
           );
-        } else {
+      } else {
           $playerList.append(
-            $(
-              "<div class='row'>" +
-                '<div class="btn-group m-s-auto">' +
-                '<div id="player-' +
-                room.characters[i].index +
-                '">' +
-                '<button type="button" class="btn btn-dark namePlate" id="initPlate" draggable="false">' +
-                room.characters[i].name +
-                ", Initiative: " +
-                room.characters[i].initiative +
-                "</button>" +
-                "</div>" +
-                '<div class="skullbtn">' +
-                '<button type="button" class="btn btn-dark btn-circle skull">' +
-                '<i class="fas fa-skull"></i>' +
-                "</button>" +
-                "</div>" +
-                '<div class="skullbtn">' +
-                "<button data-id='" +
-                i +
-                '\' type="button" class="btn btn-danger btn-circle delete">' +
-                "<i class='fas fa-trash-alt'></i>" +
-                "</button>" +
-                "</div>" +
-                "</div>" +
-                "</div>"
-            )
+              $(
+                  '<div class="row">' +
+                      '<div class="btn-group m-s-auto">' +
+                          '<div id="player-' + room.characters[i].index +'">' +
+                              '<button data-id="' + i + '" type="button" class="btn btn-dark namePlate ' + status + '" draggable="false">' + room.characters[i].name + ", Initiative:" + room.characters[i].initiative + '</button>' +
+                          '</div>' +
+                          '<div class="skullbtn">' +
+                              '<button data-id="' + i +'" type="button" class="btn btn-dark btn-circle skull">' +
+                                  '<i class="fas fa-skull"></i>' +
+                              '</button>' +
+                          '</div>' +
+                          '<div class="skullbtn">' +
+                              '<button data-id="' + i + '" type="button" class="btn btn-danger btn-circle delete">' +
+                                  '<i class="fas fa-trash-alt"></i>' +
+                              '</button>' +
+                          '</div>' +
+                      '</div>' +
+                  '</div>'
+              )
           );
-        }
+      }
       }
       $(".end-turn").each(function(index) {
         $(this).on("click", function() {
@@ -149,6 +139,16 @@ function RefreshPlayerList() {
             room: room
           });
         });
+      });
+      $(".skull").each(function(index) {
+        $(this).on("click", function() {
+          var clickedCharacterIndex = $(this).data("id");
+          room.characters[clickedCharacterIndex].isDead = !room.characters[clickedCharacterIndex].isDead
+          socket.emit("PlayerUpdate", {
+            room: room
+          });
+          console.log(room.characters)
+        })
       });
       $(".delete").each(function(index) {
         $(this).on("click", function() {
