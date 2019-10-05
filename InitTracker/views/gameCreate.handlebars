@@ -1,20 +1,24 @@
 <div id="home">
 	<div class="container">
+		<h1 class="banner">Init<i class="fas fa-dice-d20"></i>Tracker</h1>
 		<div class="row">
 			<div class="col-8 offset-2">
-				<h2>Create A Lobby</h2>
+				<h2>Create A Game Lobby</h2>
 				<form class="clearfix mb-4" action="POST">
 					<div class="form-group">
-						<label for="game-name-input">Game Name</label>
-						<input type="text" id="game-name-input" class="form-control" placeholder="Enter name of your game">
+						<label for="game-name-input">Name your game:</label>
+						<input type="text" id="game-name-input" class="form-control"
+							placeholder="Lost Mines of Phandelver">
 					</div>
 					<div class="form-group">
-						<label for="campaign-description-input">Campaign Description</label>
-						<input class="form-control" id="campaign-description-input" placeholder="Enter description"></input>
+						<label for="campaign-description-input">Campaign description:</label>
+						<input class="form-control" id="campaign-description-input"
+							placeholder="Murder hobo-ing."></input>
 					</div>
 					<div class="form-group">
-						<label for="hosted-by-input">Hosted By</label>
-						<input class="form-control" id="hosted-by-input" placeholder="Enter DM name"></input>
+						<label for="hosted-by-input">Hosted by:</label>
+						<input class="form-control" id="hosted-by-input"
+							placeholder="Dungeon Master Rick Sanchez"></input>
 					</div>
 					<div class="input-group">
 						<button id="create-button" class="btn btn-outline-secondary" type="button">Create Game!</button>
@@ -25,4 +29,3 @@
 	</div>
 </div>
 <script src="/js/gameCreate.js"></script>
-

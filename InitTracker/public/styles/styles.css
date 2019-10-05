@@ -23,7 +23,7 @@
 /*  width: 100%;*/
 /*  border: none;*/
 /*}*/
-.namePlate{
+.namePlate {
   width: 100%;
 }
 /* #game-lobby {
@@ -38,6 +38,113 @@ background-color: darkgray;
 } */
 body {
   text-align: center;
-  color: white;
-  background-image: url("https://i.pinimg.com/originals/34/2b/ed/342beddb14207e3289ab91bba8c0e1ae.jpg");
+  background-image: url("assets/paper-bg.jpg");
+  width: 100vw;
+  font-family: ff-scala-sans-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.banner {
+  font-family: mrs-eaves-roman-small-caps, sans-serif;
+  padding: 15px;
+  font-weight: 600;
+  font-style: normal;
+  color: #822000;
+}
+
+.fa-dice-d20 {
+}
+
+.gold-border {
+  border: 10px solid;
+  border-image-source: linear-gradient(135deg, #ffbf00, #b29700);
+  border-image-slice: 1;
+}
+
+h2 {
+  color: black;
+  padding-bottom: 3vh;
+  font-style: italic;
+}
+
+#server-time {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: -99;
+}
+
+/* BUTTONS */
+
+#initPlate {
+  width: 50vw;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  font-family: mrs-eaves-roman-small-caps, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  border: 7px solid;
+  border-image-source: linear-gradient(135deg, #ffbf00, #b29700);
+  border-image-slice: 1;
+  background-color: #822000;
+}
+
+#play-btn {
+  background-color: #822000;
+}
+
+#dm-btn {
+  background-color: #822000;
+}
+
+.btn-lg {
+  width: 40vw;
+}
+
+#create-button {
+  width: 30vw;
+}
+
+#add-button {
+  width: 30vw;
+}
+.skull {
+  border: 7px solid;
+  border-image-source: linear-gradient(135deg, gray, darkgray);
+  border-image-slice: 1;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  
+
+}
+
+.end-turn{
+  border: 7px solid;
+  border-image-source: linear-gradient(135deg, green, darkgreen);
+  border-image-slice: 1;
+  margin-bottom: 10px;
+  margin-right: 10px;
+
+}
+
+.delete{
+  border: 7px solid;
+  border-image-source: linear-gradient(135deg, red, crimson);
+  border-image-slice: 1;
+  margin-bottom: 10px;
+  margin-right: 10px;
+
+}
+
+.btn-subText {
+  font-style: italic;
+  font-size: 75%;
+}
+
+/* FORMS */
+
+.input-group {
+  margin-bottom: 10px;
 }
