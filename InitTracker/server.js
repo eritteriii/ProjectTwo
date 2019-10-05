@@ -82,6 +82,7 @@ io.on("connection", function (socket) {
 		}
 		newPlayer.index = newCharacterIndex;
 		newPlayer.type = "player";
+		newPlayer.isDead = false
 		rooms[newPlayer.room].characters.push(newPlayer);
 		console.log("New Player added to room '" + rooms[newPlayer.room].name + "': " + newPlayer.name + " | " + newPlayer.initiative);
 		callback(newCharacterIndex);
