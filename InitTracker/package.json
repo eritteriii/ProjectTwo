@@ -16,7 +16,7 @@
     "heroku": "^7.31.2",
     "mysql2": "^1.7.0",
     "sequelize": "^5.19.1",
-    "socket.io": "^2.3.0",
+    "socket.io": "^2.5.0",
     "sortablejs": "^1.10.0"
   },
   "devDependencies": {
